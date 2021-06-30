@@ -1,9 +1,5 @@
 node_modules
 
-
-# Created by https://www.toptal.com/developers/gitignore/api/macos,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows
-
 ### macOS ###
 # General
 .DS_Store
@@ -58,5 +54,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# End of https://www.toptal.com/developers/gitignore/api/macos,windows

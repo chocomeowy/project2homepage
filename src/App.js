@@ -9,12 +9,7 @@ import background from "./pexels-photo.jpeg";
 
 function App() {
   return (
-    <div
-      className="App"
-      style={{
-        backgroundImage: `url(${background})`,
-      }}
-    >
+    <div className="App">
       <Header />
       <main>
         <Switch>

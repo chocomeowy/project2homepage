@@ -47,12 +47,16 @@ const RandomCat = () => {
   const changingCat = () => {
     SetChangeCat(cat);
   };
+
+  //const image = {cat[file]}
+
   return (
     <div>
       <>
         <div>
           <button onClick={changingCat}>New Cat Picture</button>
         </div>
+
         <div>
           <img src={cat.file} alt="cat pic" />
         </div>

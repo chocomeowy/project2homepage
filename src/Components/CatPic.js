@@ -48,16 +48,16 @@ function CatPic() {
     SetChangeCat(cat);
   };
   return (
-    <div>
-      <>
-        <div>
-          <button onClick={changingCat}>New Cat Picture</button>
-        </div>
-        <div>
-          <img src={cat} alt="cat pic" />
-        </div>
-      </>
-    </div>
+    <>
+      <div>
+        <button onClick={changingCat}>New Cat Picture</button>
+      </div>
+
+      <div
+        className="backgroundImage"
+        style={{ backgroundImage: `url(${cat})` }}
+      ></div>
+    </>
   );
 }
 
