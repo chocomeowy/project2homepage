@@ -8,7 +8,7 @@ function Weather() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log("data", data);
+        //console.log("data", data);
         setWeather(data);
       })
       .catch((error) => {

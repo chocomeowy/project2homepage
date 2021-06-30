@@ -18,7 +18,7 @@ const RandomCat = () => {
       .then((data) => {
         setStatus("resolved");
         setCat(data);
-        console.log(data);
+        //console.log(data);
       })
       .catch((error) => {
         setStatus("error");
