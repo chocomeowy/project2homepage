@@ -31,7 +31,7 @@ const RandomCat = () => {
       return "Please enter a currency";
     }
 
-    if (status == "pending") {
+    if (status === "pending") {
       return "Loading...";
     }
 
