@@ -18,7 +18,7 @@ const RandomCat = () => {
       .then((data) => {
         setStatus("resolved");
         setCat(data);
-        //console.log(data);
+        console.log(data);
       })
       .catch((error) => {
         setStatus("error");
@@ -28,7 +28,7 @@ const RandomCat = () => {
 
   const showCat = (status) => {
     if (status === "idle") {
-      return "Please enter a currency";
+      return "New Cat incoming.";
     }
 
     if (status === "pending") {
@@ -36,11 +36,11 @@ const RandomCat = () => {
     }
 
     if (status === "resolved") {
-      return cat;
+      return cat.file;
     }
 
     if (status === "error") {
-      return cat;
+      return cat.file;
     }
   };
 
@@ -58,7 +58,7 @@ const RandomCat = () => {
         </div>
 
         <div>
-          <img src={cat.file} alt="cat pic" />
+          <img src={showCat(status)} alt="cat pic" />
         </div>
       </>
     </div>
