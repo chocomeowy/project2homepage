@@ -1,8 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-function CatPic() {
+function CatPic(props) {
   const [cat, setCat] = useState("Cat image");
-
   const [changeCat, SetChangeCat] = useState();
   const url2 = "https://thatcopy.pw/catapi/rest/";
 
@@ -31,9 +30,8 @@ function CatPic() {
       <div
         className="backgroundImage"
         style={{ backgroundImage: `url(${cat})` }}
-      >
-        <button onClick={changingCat}>New Cat Picture</button>
-      </div>
+      />
+      <button onClick={changingCat}>New Cat Picture</button>
     </>
   );
 }

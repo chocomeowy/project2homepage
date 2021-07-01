@@ -14,10 +14,9 @@ function MotivationQuotes() {
   };
   return (
     <>
-      <button onClick={changeQuote}>I want another quote.</button>
-      <h2>
+      <h1 onClick={changeQuote}>
         {randomQuote.quote} - {randomQuote.name}
-      </h2>
+      </h1>
     </>
   );
 }
