@@ -5,7 +5,6 @@ import About from "./Components/About";
 import Todo from "./Components/Todo";
 import RandomCat from "./Components/RandomCat";
 import { Route, Redirect, Switch } from "react-router-dom";
-import background from "./pexels-photo.jpeg";
 
 function App() {
   return (
