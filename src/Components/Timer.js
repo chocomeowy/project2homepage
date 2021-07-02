@@ -13,7 +13,14 @@ const Timer = () => {
       <h1 style={{ fontSize: "7em" }}>
         {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
       </h1>
-      <div>{time.toLocaleDateString()}</div>
+      <div>
+        {time.toLocaleDateString("en-GB", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </div>
     </>
   );
 };
