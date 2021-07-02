@@ -10,11 +10,7 @@ import { useState } from "react";
 function App() {
   const [cat, setCat] = useState(Cat);
   return (
-    <div
-      className="App"
-      className="backgroundImage"
-      style={{ backgroundImage: `url(${cat})` }}
-    >
+    <div className="backgroundImage" style={{ backgroundImage: `url(${cat})` }}>
       <Header />
       <main>
         <Switch>

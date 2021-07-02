@@ -1,5 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Button } from "@material-ui/core";
+
 const RandomCat = () => {
   const [cat, setCat] = useState("Cat image");
   const [status, setStatus] = useState("idle");
@@ -18,7 +20,7 @@ const RandomCat = () => {
       .then((data) => {
         setStatus("resolved");
         setCat(data);
-        console.log(data);
+        //console.log(data);
       })
       .catch((error) => {
         setStatus("error");
@@ -54,7 +56,9 @@ const RandomCat = () => {
     <div>
       <>
         <div>
-          <button onClick={changingCat}>New Cat Picture</button>
+          <Button variant="contained" color="primary" onClick={changingCat}>
+            New Cat Picture
+          </Button>
         </div>
 
         <div>
