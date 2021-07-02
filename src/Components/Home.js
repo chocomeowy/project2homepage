@@ -3,14 +3,30 @@ import CatPic from "./CatPic";
 import MotivationQuotes from "./MotivationQuotes";
 import Timer from "./Timer";
 
-function Home() {
+function Home(props) {
   return (
     <>
       <div>
         <Weather />
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <Timer />
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <MotivationQuotes />
-        <CatPic />
+        <CatPic setCat={props.setCat} />
       </div>
     </>
   );

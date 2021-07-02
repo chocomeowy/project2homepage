@@ -5,15 +5,21 @@ import About from "./Components/About";
 import Todo from "./Components/Todo";
 import RandomCat from "./Components/RandomCat";
 import { Route, Redirect, Switch } from "react-router-dom";
-
+import Cat from "./pexels-photo.jpeg";
+import { useState } from "react";
 function App() {
+  const [cat, setCat] = useState(Cat);
   return (
-    <div className="App">
+    <div
+      className="App"
+      className="backgroundImage"
+      style={{ backgroundImage: `url(${cat})` }}
+    >
       <Header />
       <main>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home setCat={setCat} />
           </Route>
           <Route path="/CatPic/">
             <RandomCat />

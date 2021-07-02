@@ -23,14 +23,11 @@ function CatPic(props) {
   }, [changeCat]);
 
   const changingCat = () => {
+    props.setCat(cat);
     SetChangeCat(cat);
   };
   return (
     <>
-      <div
-        className="backgroundImage"
-        style={{ backgroundImage: `url(${cat})` }}
-      />
       <button onClick={changingCat}>New Cat Picture</button>
     </>
   );
