@@ -16,12 +16,7 @@ function Home(props) {
         <br></br>
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+
         <br></br>
         <br></br>
         <br></br>

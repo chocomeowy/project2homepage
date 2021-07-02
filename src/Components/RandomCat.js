@@ -57,12 +57,12 @@ const RandomCat = () => {
       <>
         <div>
           <Button variant="contained" color="primary" onClick={changingCat}>
-            New Cat Picture
+            GIVE ME MORE CATS!
           </Button>
         </div>
 
         <div>
-          <img src={showCat(status)} alt="cat pic" />
+          <img src={showCat(status)} alt="cat pic" style={{ width: "100vw" }} />
         </div>
       </>
     </div>

@@ -17,34 +17,50 @@ const useStyles = makeStyles({
 const About = () => {
   const classes = useStyles();
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
+    <>
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt="Cats picture"
+            height="140"
+            img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Felis_silvestris_catus_lying_on_rice_straw.jpg/440px-Felis_silvestris_catus_lying_on_rice_straw.jpg"
+            title="Cats picture"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              Cat
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              The cat (Felis catus) is a domestic species of small carnivorous
+              mammal.
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt="Cats picture"
+            height="140"
+            img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Felis_silvestris_catus_lying_on_rice_straw.jpg/440px-Felis_silvestris_catus_lying_on_rice_straw.jpg"
+            title="Cats picture"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              Cat
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              The cat (Felis catus) is a domestic species of small carnivorous
+              mammal.
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </>
   );
 };
 

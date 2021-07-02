@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Button } from "@material-ui/core";
 function CatPic(props) {
   const [cat, setCat] = useState("Cat image");
   const [changeCat, SetChangeCat] = useState();
@@ -28,7 +29,9 @@ function CatPic(props) {
   };
   return (
     <>
-      <button onClick={changingCat}>New Cat Picture</button>
+      <Button variant="contained" onClick={changingCat}>
+        New Cat Picture
+      </Button>
     </>
   );
 }

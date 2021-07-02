@@ -28,7 +28,7 @@ function Header() {
       >
         <Tab label="Homepage" to="/" component={Link} />
 
-        <Tab label="More Cat Pictures?" to="/catpic/" component={Link} />
+        <Tab label="More Cats?" to="/catpic/" component={Link} />
 
         <Tab label="To Do List" to="/todo/" component={Link} />
 
