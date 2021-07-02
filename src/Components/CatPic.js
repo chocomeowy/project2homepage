@@ -1,6 +1,5 @@
-import React from "react";
-import { useEffect, useState } from "react";
 import { Button } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
 function CatPic(props) {
   const [cat, setCat] = useState("Cat image");
   const [changeCat, SetChangeCat] = useState();

@@ -1,12 +1,12 @@
-import "./App.css";
-import Home from "./Components/Home";
-import Header from "./Components/Header";
-import About from "./Components/About";
-import Todo from "./Components/Todo";
-import RandomCat from "./Components/RandomCat";
-import { Route, Redirect, Switch } from "react-router-dom";
-import Cat from "./pexels-photo.jpeg";
 import { useState } from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import "./App.css";
+import About from "./Components/About";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import RandomCat from "./Components/RandomCat";
+import Todo from "./Components/Todo";
+import Cat from "./pexels-photo.jpeg";
 function App() {
   const [cat, setCat] = useState(Cat);
   return (

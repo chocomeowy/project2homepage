@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import motivations from "./motivations";
 
 function MotivationQuotes() {
@@ -14,7 +13,7 @@ function MotivationQuotes() {
   };
   return (
     <>
-      <h1 onClick={changeQuote}>
+      <h1 className="div-bottom" onClick={changeQuote}>
         {randomQuote.quote} - {randomQuote.name}
       </h1>
     </>

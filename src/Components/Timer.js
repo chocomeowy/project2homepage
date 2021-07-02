@@ -10,7 +10,7 @@ const Timer = () => {
   });
   return (
     <>
-      <h1 style={{ fontSize: "7em" }}>
+      <h1 className="div-center" style={{ fontSize: "7em" }}>
         {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
       </h1>
       <div>
