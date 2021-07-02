@@ -29,7 +29,7 @@ function CatPic(props) {
   return (
     <>
       <Button variant="contained" onClick={changingCat}>
-        New Cat Picture
+        New Cat background!
       </Button>
     </>
   );

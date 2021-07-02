@@ -13,9 +13,9 @@ function MotivationQuotes() {
   };
   return (
     <>
-      <h1 className="div-bottom" onClick={changeQuote}>
+      <h4 className="div-bottom" onClick={changeQuote}>
         {randomQuote.quote} - {randomQuote.name}
-      </h1>
+      </h4>
     </>
   );
 }

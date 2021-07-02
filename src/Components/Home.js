@@ -7,9 +7,9 @@ function Home(props) {
   return (
     <>
       <div>
+        <CatPic setCat={props.setCat} />
         <Weather />
         <Timer />
-        <CatPic setCat={props.setCat} />
         <MotivationQuotes />
       </div>
     </>

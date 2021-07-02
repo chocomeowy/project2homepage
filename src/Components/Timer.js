@@ -10,17 +10,17 @@ const Timer = () => {
   });
   return (
     <>
-      <h1 className="div-center" style={{ fontSize: "7em" }}>
+      <h1 className="div-center" style={{ fontSize: "5em" }}>
         {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
       </h1>
-      <div>
+      <h4>
         {time.toLocaleDateString("en-GB", {
           weekday: "long",
           year: "numeric",
           month: "long",
           day: "numeric",
         })}
-      </div>
+      </h4>
     </>
   );
 };
