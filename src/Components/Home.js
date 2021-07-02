@@ -7,9 +7,9 @@ function Home() {
   return (
     <>
       <div>
-        <MotivationQuotes />
         <Weather />
         <Timer />
+        <MotivationQuotes />
         <CatPic />
       </div>
     </>
