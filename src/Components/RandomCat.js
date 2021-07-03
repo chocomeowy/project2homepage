@@ -1,7 +1,6 @@
-import React from "react";
-import { useEffect, useState } from "react";
 import { Button } from "@material-ui/core";
-
+import React, { useEffect, useState } from "react";
+import Quotes from "./Quotes";
 const RandomCat = () => {
   const [cat, setCat] = useState("Cat image");
   const [status, setStatus] = useState("idle");
@@ -53,19 +52,18 @@ const RandomCat = () => {
   //const image = {cat[file]}
 
   return (
-    <div>
-      <>
-        <div>
-          <Button variant="contained" color="primary" onClick={changingCat}>
-            GIVE ME MORE CATS!
-          </Button>
-        </div>
+    <>
+      <Quotes />
+      <div>
+        <Button variant="contained" color="primary" onClick={changingCat}>
+          GIVE ME MORE CATS!
+        </Button>
+      </div>
 
-        <div>
-          <img src={showCat(status)} alt="cat pic" style={{ width: "100vw" }} />
-        </div>
-      </>
-    </div>
+      <div>
+        <img src={showCat(status)} alt="cat pic" style={{ width: "100vw" }} />
+      </div>
+    </>
   );
 };
 

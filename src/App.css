@@ -31,3 +31,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.trans {
+  margin: 10px;
+  background-color: #ffffff;
+  opacity: 0.2;
+}
