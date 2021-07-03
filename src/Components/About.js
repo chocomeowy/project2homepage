@@ -100,8 +100,17 @@ const About = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            https://www.catwelfare.org/adoptions/ https://spca.org.sg/
-            https://kittensanctuarysg.org/
+            <a href="https://www.catwelfare.org/adoptions/" target="_blank">
+              Cat Welfare Society
+            </a>
+            <br></br>
+            <a href="https://spca.org.sg/" target="_blank">
+              SPCA
+            </a>
+            <br></br>
+            <a href="https://kittensanctuarysg.org/" target="_blank">
+              Kitten Sanctuary
+            </a>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -129,8 +138,18 @@ const About = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Or you met up with a flerken?
-            https://marvelcinematicuniverse.fandom.com/wiki/Flerken
+            <img
+              src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/c/cd/Goose_Textless_Poster.jpg"
+              alt="Goose flerken picture"
+            />
+            <br></br>
+            Or you met up with a flerken?<br></br>
+            <a
+              href="https://marvelcinematicuniverse.fandom.com/wiki/Flerken"
+              target="_blank"
+            >
+              https://marvelcinematicuniverse.fandom.com/wiki/Flerken
+            </a>
           </Typography>
         </AccordionDetails>
       </Accordion>
