@@ -18,8 +18,9 @@ function Weather() {
 
   return (
     <>
-      <div>Today's forecast: {weather?.items?.[0]?.general?.forecast}</div>
       <div>
+        Today's forecast: {weather?.items?.[0]?.general?.forecast}
+        <br></br>
         With a high of {weather?.items?.[0]?.general?.temperature.high} degrees
         celcius and a low of {weather?.items?.[0]?.general?.temperature.low}{" "}
         degrees celcius.

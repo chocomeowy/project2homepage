@@ -33,7 +33,10 @@
 }
 
 .trans {
-  margin: 10px;
   background-color: #ffffff;
-  opacity: 0.2;
+  opacity: 0.5;
+}
+.transtext {
+  color: black;
+  font-weight: bold;
 }

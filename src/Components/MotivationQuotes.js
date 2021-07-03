@@ -14,7 +14,11 @@ function MotivationQuotes() {
   return (
     <>
       <h4 className="div-bottom" onClick={changeQuote}>
-        {randomQuote.quote} - {randomQuote.name}
+        <div className="trans">
+          <p className="transtext">
+            {randomQuote.quote} - {randomQuote.name}
+          </p>
+        </div>
       </h4>
     </>
   );

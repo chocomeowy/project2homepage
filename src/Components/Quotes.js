@@ -20,7 +20,7 @@ const Quotes = () => {
 
   return (
     <>
-      <h3>{quote?.content}</h3>
+      <h3 className="trans">{quote?.content}</h3>
       <div>{quote?.author}</div>
       <Button variant="contained" color="primary" onClick={changingQuote}>
         New Quote!
