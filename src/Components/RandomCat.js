@@ -1,7 +1,7 @@
 import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import Quotes from "./Quotes";
-const RandomCat = () => {
+const RandomCat = (props) => {
   const [cat, setCat] = useState("Cat image");
   const [status, setStatus] = useState("idle");
   const [changeCat, SetChangeCat] = useState();
@@ -46,6 +46,7 @@ const RandomCat = () => {
   };
 
   const changingCat = () => {
+    props.setCat(cat.file);
     SetChangeCat(cat);
   };
 

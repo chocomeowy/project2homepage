@@ -33,10 +33,5 @@
 }
 
 .trans {
-  background-color: #ffffff;
-  opacity: 0.5;
-}
-.transtext {
-  color: black;
-  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
 }

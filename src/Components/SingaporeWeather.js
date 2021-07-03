@@ -18,7 +18,7 @@ function Weather() {
 
   return (
     <>
-      <div>
+      <div className="trans">
         Today's forecast: {weather?.items?.[0]?.general?.forecast}
         <br></br>
         With a high of {weather?.items?.[0]?.general?.temperature.high} degrees

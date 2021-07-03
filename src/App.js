@@ -18,7 +18,7 @@ function App() {
             <Home setCat={setCat} />
           </Route>
           <Route path="/CatPic/">
-            <RandomCat />
+            <RandomCat setCat={setCat} />
           </Route>
           <Route path="/todo/">
             <Todo />
