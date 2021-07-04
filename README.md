@@ -7,6 +7,7 @@ Making a homepage app which show cat pictues, quotes, and today's weather foreca
 - React
 - Javascript
 - Ajax (fetch) for API
+- moment for date time
 
 # Wireframes
 
@@ -33,7 +34,7 @@ A way to backup the quotes so user can save it otherwise the quotes will be lost
 Random Cat
 Cat
 Quotes
-Data.gov.sg 24hrs API
+Data.gov.sg 24hrs and 2hrs API
 
 # Acknowledgments
 

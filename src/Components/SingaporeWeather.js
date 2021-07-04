@@ -36,9 +36,9 @@ function Weather() {
         Today's forecast: {weather?.items?.[0]?.general?.forecast}
         <br></br>
         With a high of {weather?.items?.[0]?.general?.temperature.high}°C and a
-        low of {weather?.items?.[0]?.general?.temperature.low}°C.
+        low of {weather?.items?.[0]?.general?.temperature.low}°C
         <br></br>
-        In the next two hours: {weather2?.items?.[0]?.forecasts?.[12]?.forecast}
+        In the next 2 hours: {weather2?.items?.[0]?.forecasts?.[12]?.forecast}
       </div>
     </>
   );
