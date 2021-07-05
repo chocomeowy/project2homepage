@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import About from "./Components/About";
+import AirTable from "./Components/AirTable";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import RandomCat from "./Components/RandomCat";
@@ -21,7 +22,7 @@ function App() {
             <RandomCat setCat={setCat} />
           </Route>
           <Route path="/todo/">
-            <Todo />
+            <AirTable />
           </Route>
           <Route path="/about/">
             <About />
