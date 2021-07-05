@@ -1,6 +1,7 @@
 node_modules
 #database
-src/database/firebaseDB.js
+database/firebaseDB.js
+
 .env
 
 ### macOS ###

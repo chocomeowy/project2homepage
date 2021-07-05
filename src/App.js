@@ -6,7 +6,7 @@ import AirTable from "./Components/AirTable";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import RandomCat from "./Components/RandomCat";
-import Todo from "./Components/Todo";
+//import Todo from "./Components/Todo";
 import Cat from "./pexels-photo.jpeg";
 function App() {
   const [cat, setCat] = useState(Cat);

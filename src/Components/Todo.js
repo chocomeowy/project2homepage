@@ -1,4 +1,4 @@
-// import firebase from "../database/firebaseDB";
+//import firebase from "../database/firebaseDB";
 // import {
 //   List,
 //   Button,
@@ -10,20 +10,41 @@
 //   ListItemSecondaryAction,
 //   IconButton,
 // } from "@material-ui/core";
-// import { useState, useEffect, useRef, FlatList, View } from "react";
+import { useState } from "react";
 // import { Route } from "react-router";
+function TodoForm({ addTodo }) {
+  const [value, setValue] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!value) return;
+    addTodo(value);
+    setValue("");
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="input"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+    </form>
+  );
+}
 function Todo(props) {
-  // const [notes, setNotes] = useState([]);
+  const [todos, setTodos] = useState([]);
   // const [text, setText] = useState("");
   // const inputRef = useRef();
-  //const db = firebase.firestore().collection("todos");
+  // const db = firebase.firestore().collection("todos");
   // useEffect(() => {
   //   const unsubscribe = db.orderBy("created").onSnapshot((collection) => {
   //     const updatedNotes = collection.docs.map((doc) => {
-  //       const noteObject = { ...doc.data(), id: doc.id };
+  //       const todos = { ...doc.data(), id: doc.id };
   //     });
-  //     setNotes(updatedNotes);
+  //     setTodos(updatedNotes);
+  //     console.log(collection);
   //   });
   //   return () => {
   //     unsubscribe();
@@ -35,10 +56,34 @@ function Todo(props) {
 
   //   db.doc(id).delete();
   // };
+  function Todo({ todo, index }) {
+    return (
+      <>
+        <div className="todo">{todo.text}</div>{" "}
+        <button onClick={() => removeTodo(index)}>x</button>
+      </>
+    );
+  }
+
+  const addTodo = (text) => {
+    const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  };
+
+  const removeTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
 
   return (
     <>
-      <h1>todo</h1>
+      <div className="todo-list">
+        {todos.map((todo, index) => (
+          <Todo key={index} index={index} todo={todo} removeTodo={removeTodo} />
+        ))}
+        <TodoForm addTodo={addTodo} />
+      </div>
     </>
   );
 }
