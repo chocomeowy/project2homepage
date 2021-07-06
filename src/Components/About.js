@@ -79,14 +79,41 @@ const About = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <p>Cat Pic 1 https://thatcopy.pw/catapi/rest/ </p>
-            <p>Cat Pic 2 https://aws.random.cat/meow </p>
-            <p>Random Quotes https://api.quotable.io/random </p>
-            <p>
+            <a
+              href="https://thatcopy.pw/catapi/rest/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Cat Pic 1
+            </a>
+            <br></br>
+            <a
+              href="https://aws.random.cat/meow"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Cat Pic 2
+            </a>
+            <br></br>
+            <a
+              href="https://api.quotable.io/random"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Random Quotes
+            </a>
+            <br></br>
+            <a
+              href="https://data.gov.sg/dataset/weather-forecast"
+              target="_blank"
+              rel="noreferrer"
+            >
               Weather forecast for data.gov.sg
-              https://data.gov.sg/dataset/weather-forecast
-            </p>
-            <p>Material UI from https://material-ui.com/</p>
+            </a>
+            <br></br>
+            <a href="https://material-ui.com/" target="_blank" rel="noreferrer">
+              Material UI from
+            </a>
           </Typography>
         </AccordionDetails>
       </Accordion>

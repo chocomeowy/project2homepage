@@ -85,6 +85,7 @@ const AirTable = () => {
 
       <div>
         <iframe
+          title="form"
           className="airtable-embed"
           src="https://airtable.com/embed/shrNNg8FB0rOZAk3h?"
           backgroundcolor="cyan"

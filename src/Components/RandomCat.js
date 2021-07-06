@@ -4,9 +4,11 @@ import Quotes from "./Quotes";
 const RandomCat = (props) => {
   const [cat, setCat] = useState("Cat image");
   const [status, setStatus] = useState("idle");
-  const [changeCat, SetChangeCat] = useState();
+  const [changeCat, setChangeCat] = useState();
+  const [dog, setDog] = useState("Dog");
+  const [changeDog, setChangeDog] = useState();
   const url = "https://aws.random.cat/meow";
-
+  const url2 = "https://random.dog/woof.json";
   useEffect(() => {
     setStatus("pending");
     fetch(url)
@@ -26,6 +28,23 @@ const RandomCat = (props) => {
         setCat(error);
       });
   }, [changeCat]);
+
+  useEffect(() => {
+    fetch(url2)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error("Bad Response from Server");
+      })
+      .then((data) => {
+        setDog(data);
+        //console.log(data);
+      })
+      .catch((error) => {
+        setDog(error);
+      });
+  }, [changeDog]);
 
   const showCat = (status) => {
     if (status === "idle") {
@@ -47,7 +66,12 @@ const RandomCat = (props) => {
 
   const changingCat = () => {
     props.setCat(cat.file);
-    SetChangeCat(cat);
+    setChangeCat(cat);
+  };
+
+  const changingDog = () => {
+    props.setCat(dog?.url);
+    setChangeDog(dog);
   };
 
   //const image = {cat[file]}
@@ -58,6 +82,9 @@ const RandomCat = (props) => {
       <div>
         <Button variant="contained" color="primary" onClick={changingCat}>
           GIVE ME MORE CATS!
+        </Button>
+        <Button variant="contained" color="primary" onClick={changingDog}>
+          or you hate cats?
         </Button>
       </div>
 
