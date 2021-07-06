@@ -7,7 +7,7 @@ Making a homepage app which show cat pictues, quotes, and today's weather foreca
 - React
 - Javascript
 - Ajax (fetch) for API
-- moment for date time
+- Moment.js for date time
 
 # Wireframes
 
@@ -23,23 +23,25 @@ User is able to refresh on the quotes and pictures.
 
 Create the basic MVP for use where pictures and quotes API can be used.
 Bring up the picture to be use as background for all routes pages.
+Display the weather forecast.
 
 # Unsolved problems
 
-Todo.
-A way to backup the quotes so user can save it otherwise the quotes will be lost.
+Todo with Firebase. Used Air table instead.
 
 # APIs Used
 
-Random Cat
-Cat
-Quotes
-Data.gov.sg 24hrs and 2hrs API
+Random Cat https://aws.random.cat/meow
+Random Dog https://random.dog/woof.json
+Cat https://github.com/ThatCopy/catAPI/wiki/Usage
+Quotes https://github.com/lukePeavey/quotable
+Data.gov.sg 24hrs, 2hrs and air temperature API
+Airtable
 
 # Acknowledgments
 
 The different APIs providers.
 Simon, Jun Xiang and Samuel for the help.
-Dave for teaching me to lift state again whenever I asked.
+Many classmates for their advises and help.
 
 # References
