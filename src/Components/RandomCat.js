@@ -84,7 +84,7 @@ const RandomCat = (props) => {
           GIVE ME MORE CATS!
         </Button>
         <Button variant="contained" color="primary" onClick={changingDog}>
-          or you hate cats?
+          🐶?
         </Button>
       </div>
 

@@ -10,12 +10,12 @@ const motivation = [
       "Talent is a pursued interest. Anything that you're willing to practice, you can do.",
   },
   {
-    name: "Albus Dumbledore, The Chamber of Secrets",
+    name: "Luna Lovegood, The Order of the Phoenix",
     quote:
       "Things we lose have a way of coming back to us in the end, if not always in the way we expect.",
   },
   {
-    name: "Luna Lovegood, The Order of the Phoenix",
+    name: "Albus Dumbledore, The Chamber of Secrets",
     quote:
       "It is our choices, Harry, that show what we truly are, far more than our abilities.",
   },
