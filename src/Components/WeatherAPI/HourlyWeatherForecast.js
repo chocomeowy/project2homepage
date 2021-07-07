@@ -16,7 +16,7 @@ const HourlyWeatherForecast = () => {
       .catch((error) => {
         console.log("error", error);
       });
-  }, [currentDate]);
+  }, [url]);
 
   return (
     <>In the next 2 hours: {weather?.items?.[0]?.forecasts?.[12]?.forecast}</>

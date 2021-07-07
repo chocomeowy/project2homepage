@@ -1,6 +1,5 @@
 import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import DogAPI from "./DogAPI";
 import Quotes from "./Quotes";
 
 const RandomCat = (props) => {
