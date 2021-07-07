@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import About from "./Components/About";
 import DogAPI from "./Components/DogAPI";
-import FirebaseToDo from "./Components/FirebaseToDo";
+import FirebaseToDo from "./Components/FirebaseToDO";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import RandomCat from "./Components/RandomCat";
