@@ -10,22 +10,25 @@ const RandomCat = (props) => {
 
   useEffect(() => {
     setStatus("pending");
-    fetch(url)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error("Bad Response from Server");
-      })
-      .then((data) => {
-        setStatus("resolved");
-        setCat(data);
-        //console.log(data);
-      })
-      .catch((error) => {
-        setStatus("error");
-        setCat(error);
-      });
+    const getCat = () => {
+      fetch(url)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error("Bad Response from Server");
+        })
+        .then((data) => {
+          setStatus("resolved");
+          setCat(data);
+          //console.log(data);
+        })
+        .catch((error) => {
+          setStatus("error");
+          setCat(error);
+        });
+    };
+    getCat();
   }, [changeCat]);
 
   const showCat = (status) => {

@@ -6,20 +6,23 @@ function CatPic(props) {
   const url2 = "https://thatcopy.pw/catapi/rest/";
 
   useEffect(() => {
-    fetch(url2)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error("Bad Response from Server");
-      })
-      .then((data) => {
-        setCat(data.webpurl);
-        //console.log(data);
-      })
-      .catch((error) => {
-        setCat(error);
-      });
+    const getCat = () => {
+      fetch(url2)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error("Bad Response from Server");
+        })
+        .then((data) => {
+          setCat(data.webpurl);
+          //console.log(data);
+        })
+        .catch((error) => {
+          setCat(error);
+        });
+    };
+    getCat();
   }, [changeCat]);
 
   const changingCat = () => {

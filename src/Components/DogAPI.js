@@ -5,23 +5,26 @@ const DogAPI = (props) => {
   const [dog, setDog] = useState("Dog");
   const [changeDog, setChangeDog] = useState();
 
-  const url2 = "https://random.dog/woof.json";
+  const url = "https://random.dog/woof.json";
 
   useEffect(() => {
-    fetch(url2)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error("Bad Response from Server");
-      })
-      .then((data) => {
-        setDog(data);
-        //console.log(data);
-      })
-      .catch((error) => {
-        setDog(error);
-      });
+    const getDog = () => {
+      fetch(url)
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error("Bad Response from Server");
+        })
+        .then((data) => {
+          setDog(data);
+          //console.log(data);
+        })
+        .catch((error) => {
+          setDog(error);
+        });
+    };
+    getDog();
   }, [changeDog]);
 
   const changingDog = () => {

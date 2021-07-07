@@ -13,25 +13,26 @@ const FirebaseToDO = () => {
   const [title, setTitle] = useState("");
 
   const ref = firebase.firestore().collection("todos");
-  //console.log(ref)
+  //console.log(ref);
 
   //snapshot for real time update
-  const getTodos = () => {
-    setLoading(true);
-    ref.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
-      });
-      setTodo(items);
-      setLoading(false);
-    });
-  };
 
   //useEffect
   useEffect(() => {
+    const getTodos = () => {
+      setLoading(true);
+      ref.onSnapshot((querySnapshot) => {
+        const items = [];
+        querySnapshot.forEach((doc) => {
+          items.push(doc.data());
+        });
+        setTodo(items);
+        setLoading(false);
+        //console.log(items);
+      });
+    };
     getTodos();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (loading) {
     return <h1>loading...</h1>;
