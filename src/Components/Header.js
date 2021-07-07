@@ -27,11 +27,9 @@ function Header() {
         centered
       >
         <Tab label="Homepage" to="/" component={Link} />
-
         <Tab label="More Cats?" to="/catpic/" component={Link} />
-
+        <Tab label="Dogs?" to="/dogs/" component={Link} />
         <Tab label="To Do List" to="/todo/" component={Link} />
-
         <Tab label="About" to="/about/" component={Link} />
       </Tabs>
     </Paper>

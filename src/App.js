@@ -8,6 +8,7 @@ import Home from "./Components/Home";
 import RandomCat from "./Components/RandomCat";
 //import Todo from "./Components/Todo";
 import Cat from "./pexels-photo.jpeg";
+import DogAPI from "./Components/DogAPI";
 function App() {
   const [cat, setCat] = useState(Cat);
   return (
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/CatPic/">
             <RandomCat setCat={setCat} />
+          </Route>
+          <Route path="/dogs/">
+            <DogAPI setCat={setCat} />
           </Route>
           <Route path="/todo/">
             <AirTable />
