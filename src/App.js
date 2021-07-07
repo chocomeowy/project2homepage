@@ -2,13 +2,12 @@ import { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
 import About from "./Components/About";
-import AirTable from "./Components/AirTable";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import RandomCat from "./Components/RandomCat";
-//import Todo from "./Components/Todo";
 import Cat from "./pexels-photo.jpeg";
 import DogAPI from "./Components/DogAPI";
+import FirebaseToDO from "./Components/FirebaseToDO";
 function App() {
   const [cat, setCat] = useState(Cat);
   return (
@@ -26,7 +25,7 @@ function App() {
             <DogAPI setCat={setCat} />
           </Route>
           <Route path="/todo/">
-            <AirTable />
+            <FirebaseToDO />
           </Route>
           <Route path="/about/">
             <About />
