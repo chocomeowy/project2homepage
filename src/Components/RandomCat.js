@@ -1,11 +1,29 @@
 import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import Quotes from "./Quotes";
+import { makeStyles } from "@material-ui/core/styles";
+import ImageList from "@material-ui/core/ImageList";
+import ImageListItem from "@material-ui/core/ImageListItem";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    overflow: "hidden",
+    backgroundColor: theme.palette.background.paper,
+  },
+  imageList: {
+    height: 450,
+  },
+}));
 
 const RandomCat = (props) => {
+  const classes = useStyles();
   const [cat, setCat] = useState("Cat image");
   const [status, setStatus] = useState("idle");
   const [changeCat, setChangeCat] = useState();
+  const [catList, setCatList] = useState([]);
   const url = "https://aws.random.cat/meow";
 
   useEffect(() => {
@@ -51,12 +69,15 @@ const RandomCat = (props) => {
 
   const changingCat = () => {
     props.setCat(cat.file);
+    setCatList((newArr) => [...newArr, cat?.file]);
+    //console.log(catList);
     setChangeCat(cat);
   };
 
   return (
     <>
       <Quotes />
+
       <div>
         <Button variant="contained" color="primary" onClick={changingCat}>
           GIVE ME MORE CATS!
@@ -66,6 +87,13 @@ const RandomCat = (props) => {
       <div>
         <img src={showCat(status)} alt="cat pic" style={{ width: "100vw" }} />
       </div>
+      <ImageList rowHeight={250} className={classes.imageList} cols={3}>
+        {catList.map((item, index) => (
+          <ImageListItem key={index}>
+            <img src={item} alt={item} />
+          </ImageListItem>
+        ))}
+      </ImageList>
     </>
   );
 };

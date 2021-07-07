@@ -18,7 +18,8 @@ const DailyHourForecast = () => {
   }, []);
   return (
     <>
-      {weather?.items?.[0]?.general?.forecast}.<br></br>
+      {weather?.items?.[0]?.general?.forecast}
+      <br></br>
       With a high of {weather?.items?.[0]?.general?.temperature.high}°C and a
       low of {weather?.items?.[0]?.general?.temperature.low}°C
     </>

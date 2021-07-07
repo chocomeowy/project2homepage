@@ -64,8 +64,8 @@ const About = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            This is part of my project during my learnings in General Assembly
-            as a student in Software Engineering Immersive Course!
+            A small project of mine in General Assembly as a student in Software
+            Engineering Immersive Course!
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -96,6 +96,14 @@ const About = () => {
             </a>
             <br></br>
             <a
+              href="https://random.dog/woof.json"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Dogs
+            </a>
+            <br></br>
+            <a
               href="https://api.quotable.io/random"
               target="_blank"
               rel="noreferrer"
@@ -108,11 +116,11 @@ const About = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Weather forecast for data.gov.sg
+              Weather forecast
             </a>
             <br></br>
             <a href="https://material-ui.com/" target="_blank" rel="noreferrer">
-              Material UI from
+              Material UI
             </a>
           </Typography>
         </AccordionDetails>
@@ -155,11 +163,11 @@ const About = () => {
         onChange={handleChange("panel5")}
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>Famous cats</Typography>
+          <Typography>Cat breeds</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            https://www.indiewire.com/2019/03/best-movie-cats-1202050469/
+            https://en.wikipedia.org/wiki/List_of_cat_breeds
           </Typography>
         </AccordionDetails>
       </Accordion>
