@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import firebase from "../database/firebaseDB";
 
-const FirebaseToDo = () => {
+const FirebaseToDO = () => {
   const [todo, setTodo] = useState([]);
   const [loading, setLoading] = useState(false);
   const [title, setTitle] = useState("");
@@ -103,4 +103,4 @@ const FirebaseToDo = () => {
   );
 };
 
-export default FirebaseToDo;
+export default FirebaseToDO;

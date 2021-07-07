@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   imageList: {
+    width: "100%",
     height: 520,
   },
 }));
@@ -93,7 +94,7 @@ const RandomCat = (props) => {
       </div>
       <div>{showCat(status)}</div>
       <div>
-        <img src={showCat(status)} alt="cat pic" style={{ width: "100vw" }} />
+        <img src={showCat(status)} alt="cat pic" style={{ width: "99vw" }} />
       </div>
     </>
   );
