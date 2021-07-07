@@ -7,7 +7,7 @@ import Home from "./Components/Home";
 import RandomCat from "./Components/RandomCat";
 import Cat from "./pexels-photo.jpeg";
 import DogAPI from "./Components/DogAPI";
-import FirebaseToDO from "./Components/FirebaseToDO";
+import FirebaseToDo from "./Components/FirebaseToDo";
 function App() {
   const [cat, setCat] = useState(Cat);
   return (
@@ -25,7 +25,7 @@ function App() {
             <DogAPI setCat={setCat} />
           </Route>
           <Route path="/todo/">
-            <FirebaseToDO />
+            <FirebaseToDo />
           </Route>
           <Route path="/about/">
             <About />

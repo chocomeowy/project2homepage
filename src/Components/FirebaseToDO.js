@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import firebase from "../database/firebaseDB";
 import EditIcon from "@material-ui/icons/Edit";
 
-const FirebaseToDO = () => {
+const FirebaseToDo = () => {
   const [todo, setTodo] = useState([]);
   const [loading, setLoading] = useState(false);
   const [title, setTitle] = useState("");
@@ -104,4 +104,4 @@ const FirebaseToDO = () => {
   );
 };
 
-export default FirebaseToDO;
+export default FirebaseToDo;

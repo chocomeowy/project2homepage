@@ -5,7 +5,7 @@ const DogAPI = (props) => {
   const [dog, setDog] = useState("Dog");
   const [changeDog, setChangeDog] = useState();
 
-  const url = "https://random.dog/woof.json";
+  const url = "https://random.dog/woof.json?include=jpg,jpeg,gif";
 
   useEffect(() => {
     const getDog = () => {

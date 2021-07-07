@@ -1,6 +1,5 @@
 import { Button } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import Quotes from "./Quotes";
 import { makeStyles } from "@material-ui/core/styles";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
@@ -14,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   imageList: {
-    height: 450,
+    height: 520,
   },
 }));
 
@@ -69,15 +68,24 @@ const RandomCat = (props) => {
 
   const changingCat = () => {
     props.setCat(cat.file);
+    setChangeCat(cat);
     setCatList((newArr) => [...newArr, cat?.file]);
     //console.log(catList);
-    setChangeCat(cat);
+
+    if (catList.length > 5) {
+      catList.shift();
+    }
   };
 
   return (
     <>
-      <Quotes />
-
+      <ImageList rowHeight={250} className={classes.imageList} cols={3}>
+        {catList.map((item, index) => (
+          <ImageListItem key={index}>
+            <img src={item} alt={item} />
+          </ImageListItem>
+        ))}
+      </ImageList>
       <div>
         <Button variant="contained" color="primary" onClick={changingCat}>
           GIVE ME MORE CATS!
@@ -87,13 +95,6 @@ const RandomCat = (props) => {
       <div>
         <img src={showCat(status)} alt="cat pic" style={{ width: "100vw" }} />
       </div>
-      <ImageList rowHeight={250} className={classes.imageList} cols={3}>
-        {catList.map((item, index) => (
-          <ImageListItem key={index}>
-            <img src={item} alt={item} />
-          </ImageListItem>
-        ))}
-      </ImageList>
     </>
   );
 };

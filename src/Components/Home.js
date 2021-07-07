@@ -1,5 +1,5 @@
 import CatPic from "./CatPic";
-import MotivationQuotes from "./MotivationQuotes";
+import Quotes from "./Quotes";
 import Weather from "./SingaporeWeather";
 import Timer from "./Timer";
 
@@ -10,7 +10,7 @@ function Home(props) {
         <CatPic setCat={props.setCat} />
         <Weather />
         <Timer />
-        <MotivationQuotes />
+        <Quotes />
       </div>
     </>
   );

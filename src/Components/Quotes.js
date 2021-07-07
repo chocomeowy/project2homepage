@@ -20,14 +20,15 @@ const Quotes = () => {
 
   return (
     <>
-      <h3 className="trans">
+      <h3 className="trans div-bottom">
         {quote?.content}
         <br></br>
         {quote?.author}
+        <br></br>
+        <Button variant="contained" color="primary" onClick={changingQuote}>
+          New Quote!
+        </Button>
       </h3>
-      <Button variant="contained" color="primary" onClick={changingQuote}>
-        New Quote!
-      </Button>
     </>
   );
 };
