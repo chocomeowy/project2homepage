@@ -1,24 +1,13 @@
 import { Button } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import Input from "@material-ui/core/Input";
-import { makeStyles } from "@material-ui/core/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import firebase from "../database/firebaseDB";
 import EditIcon from "@material-ui/icons/Edit";
 
-const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(1),
-  },
-  extendedIcon: {
-    marginRight: theme.spacing(1),
-  },
-}));
-
 const FirebaseToDO = () => {
-  const classes = useStyles();
   const [todo, setTodo] = useState([]);
   const [loading, setLoading] = useState(false);
   const [title, setTitle] = useState("");
