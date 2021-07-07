@@ -2,10 +2,10 @@ import { Button } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import Input from "@material-ui/core/Input";
 import DeleteIcon from "@material-ui/icons/Delete";
+import EditIcon from "@material-ui/icons/Edit";
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import firebase from "../database/firebaseDB";
-import EditIcon from "@material-ui/icons/Edit";
 
 const FirebaseToDo = () => {
   const [todo, setTodo] = useState([]);
@@ -14,9 +14,7 @@ const FirebaseToDo = () => {
 
   const ref = firebase.firestore().collection("todos");
   //console.log(ref);
-
   //snapshot for real time update
-
   //useEffect
   useEffect(() => {
     const getTodos = () => {
