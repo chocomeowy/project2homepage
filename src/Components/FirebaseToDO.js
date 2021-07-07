@@ -95,7 +95,8 @@ const FirebaseToDo = () => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <Button
-        variant="contained"
+        variant="outlined"
+        style={{ color: "white" }}
         onClick={() => addTodo({ title, id: uuidv4() })}
       >
         Submit
