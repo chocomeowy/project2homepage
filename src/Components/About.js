@@ -128,6 +128,14 @@ const About = () => {
               >
                 Material UI
               </a>
+              <br></br>
+              <a
+                href="https://codepen.io/Moslim/pen/zwJPgL"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CSS for time
+              </a>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -167,7 +175,13 @@ const About = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              https://en.wikipedia.org/wiki/List_of_cat_breeds
+              <a
+                href="https://en.wikipedia.org/wiki/List_of_cat_breeds"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://en.wikipedia.org/wiki/List_of_cat_breeds
+              </a>
             </Typography>
           </AccordionDetails>
         </Accordion>

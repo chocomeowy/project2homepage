@@ -18,12 +18,9 @@ const Timer = () => {
           day: "numeric",
         })}
       </h4>
-      <h1
-        className="div-center"
-        style={{ fontSize: "5em", textShadow: "4px 4px 4px blue" }}
-      >
+      <h2 className="div-center">
         {time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-      </h1>
+      </h2>
     </>
   );
 };

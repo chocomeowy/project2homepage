@@ -35,3 +35,27 @@
 .trans {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+.title {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+}
+
+h2 {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  line-height: 0.75;
+  margin: 10px 0;
+}
