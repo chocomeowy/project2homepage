@@ -66,7 +66,7 @@ const About = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              A small project of mine in General Assembly as a student in
+              A small project of mine as a student in General Assembly's
               Software Engineering Immersive Course!
             </Typography>
           </AccordionDetails>
@@ -212,7 +212,7 @@ const About = () => {
             <Typography>Credits</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>Made with ❤️ for 🐈</Typography>
+            <Typography>Made with ❤️ for 🐈 and 🐕</Typography>
           </AccordionDetails>
         </Accordion>
       </div>
