@@ -77,23 +77,12 @@ const DogAPI = (props) => {
     return <h1>loading...</h1>;
   }
 
-  const addDog = (newDog) => {
-    ref
-      .doc(newDog.id)
-      .set(newDog)
-      .catch((err) => {
-        console.log.error(err);
-      });
-  };
-
   return (
     <>
       <Button variant="contained" color="primary" onClick={changingDog}>
         🐶?
       </Button>
-      <Button variant="contained" color="primary" onClick={addDog}>
-        🐶?12222
-      </Button>
+
       <ImageList rowHeight={250} className={classes.imageList} cols={3}>
         {dogList.map((item, index) => (
           <ImageListItem key={index}>

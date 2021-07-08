@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
+import firebase from "../database/firebaseDB";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +26,8 @@ const RandomCat = (props) => {
   const [changeCat, setChangeCat] = useState();
   const [catList, setCatList] = useState([]);
   const url = "https://aws.random.cat/meow";
+  const [loading, setLoading] = useState(false);
+  const ref = firebase.firestore().collection("cats");
 
   useEffect(() => {
     setStatus("pending");
@@ -67,10 +70,29 @@ const RandomCat = (props) => {
     }
   };
 
+  useEffect(() => {
+    const getCat = () => {
+      setLoading(true);
+      ref.onSnapshot((querySnapshot) => {
+        const items = [];
+        querySnapshot.forEach((doc) => {
+          items.push(doc.data());
+        });
+        setCatList(items);
+        setLoading(false);
+        //console.log(items[0].title);
+      });
+    };
+    getCat();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  if (loading) {
+    return <h1>loading...</h1>;
+  }
+
   const changingCat = () => {
     props.setCat(cat.file);
     setChangeCat(cat);
-    setCatList((newArr) => [...newArr, cat?.file]);
+    setCatList((newArr) => [...newArr, { file: cat?.file }]);
     //console.log(catList);
 
     if (catList.length > 5) {
@@ -86,7 +108,7 @@ const RandomCat = (props) => {
       <ImageList rowHeight={250} className={classes.imageList} cols={3}>
         {catList.map((item, index) => (
           <ImageListItem key={index}>
-            <img src={item} alt={item} />
+            <img src={item.file} alt={item} />
           </ImageListItem>
         ))}
       </ImageList>
