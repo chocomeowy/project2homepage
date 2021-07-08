@@ -80,6 +80,9 @@ const RandomCat = (props) => {
 
   return (
     <>
+      <Button variant="contained" color="primary" onClick={changingCat}>
+        GIVE ME MORE CATS!
+      </Button>
       <ImageList rowHeight={250} className={classes.imageList} cols={3}>
         {catList.map((item, index) => (
           <ImageListItem key={index}>
@@ -87,11 +90,7 @@ const RandomCat = (props) => {
           </ImageListItem>
         ))}
       </ImageList>
-      <div>
-        <Button variant="contained" color="primary" onClick={changingCat}>
-          GIVE ME MORE CATS!
-        </Button>
-      </div>
+      <div></div>
       <div>{showCat(status)}</div>
       <div>
         <img src={showCat(status)} alt="cat pic" style={{ width: "99vw" }} />
