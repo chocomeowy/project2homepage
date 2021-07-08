@@ -27,8 +27,8 @@ function Header() {
         centered
       >
         <Tab label="Home" to="/" component={Link} />
-        <Tab label="More Cats?" to="/catpic/" component={Link} />
-        <Tab label="Dogs?" to="/dogs/" component={Link} />
+        <Tab label="🐱" to="/catpic/" component={Link} />
+        <Tab label="🐶" to="/dogs/" component={Link} />
         <Tab label="ToDo" to="/todo/" component={Link} />
         <Tab label="About" to="/about/" component={Link} />
       </Tabs>

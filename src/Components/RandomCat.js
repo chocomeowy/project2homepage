@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import firebase from "../database/firebaseDB";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -100,20 +99,28 @@ const RandomCat = (props) => {
     }
   };
 
+  const catListBackground = (newCat) => {
+    props.setCat(newCat.target.currentSrc);
+  };
+
   return (
     <>
       <Button variant="contained" color="primary" onClick={changingCat}>
         GIVE ME MORE CATS!
       </Button>
-      <ImageList rowHeight={250} className={classes.imageList} cols={3}>
+      <ImageList
+        rowHeight={250}
+        className={classes.imageList}
+        cols={3}
+        onClick={catListBackground}
+      >
         {catList.map((item, index) => (
           <ImageListItem key={index}>
             <img src={item.file} alt={item} />
           </ImageListItem>
         ))}
       </ImageList>
-      <div></div>
-      <div>{showCat(status)}</div>
+
       <div>
         <img src={showCat(status)} alt="cat pic" style={{ width: "99vw" }} />
       </div>

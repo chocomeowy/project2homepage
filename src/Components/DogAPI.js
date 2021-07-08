@@ -58,6 +58,10 @@ const DogAPI = (props) => {
     }
   };
 
+  const dogListBackground = (newDog) => {
+    props.setCat(newDog.target.currentSrc);
+  };
+
   useEffect(() => {
     const getDog = () => {
       setLoading(true);
@@ -80,17 +84,22 @@ const DogAPI = (props) => {
   return (
     <>
       <Button variant="contained" color="primary" onClick={changingDog}>
-        🐶?
+        More dogs?
       </Button>
 
-      <ImageList rowHeight={250} className={classes.imageList} cols={3}>
+      <ImageList
+        rowHeight={250}
+        className={classes.imageList}
+        cols={3}
+        onClick={dogListBackground}
+      >
         {dogList.map((item, index) => (
           <ImageListItem key={index}>
             <img src={item.title} alt={item} />
           </ImageListItem>
         ))}
       </ImageList>
-      <div>{dog?.url}</div>
+
       <img src={dog?.url} alt="dog" style={{ width: "100vw" }} />
     </>
   );
